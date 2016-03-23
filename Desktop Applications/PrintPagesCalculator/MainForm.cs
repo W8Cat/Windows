@@ -59,7 +59,8 @@ namespace PrintPagesCalculator
 
             //int i = 0;
             int x1 = 5;
-            int n2 = n - 6 + dx;
+            int n2 = n - 4 + dx;
+
 
             while (x1 < n2)
             {
