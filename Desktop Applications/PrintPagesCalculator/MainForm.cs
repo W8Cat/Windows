@@ -35,7 +35,8 @@ namespace PrintPagesCalculator
             int n = (Int32)num1.Value;  //Pages in book
             int s = n / 4;              //4x pages per Sheet
             if (n % 4 != 0) s = s + 1;  //Add 1 Sheet for <4 pages
-            int dx = n % 4;             //additional Pages aboth x4 (MODE)
+            int dx = n % 4;             //additional Pages aboth x4 (MODE) 4 == 0
+            if (dx == 0) dx = 4;
             if (dx == 3)
             {
                 Pack1 = FilPageStr + ",1," + (n - 1).ToString() + ",3";
@@ -51,7 +52,7 @@ namespace PrintPagesCalculator
                 Pack1 = FilPageStr + ",1," + FilPageStr + ",3";
                 Pack2 = "2," + FilPageStr + ",4," + n.ToString();
             }
-            if (dx == 0)
+            if (dx == 4)
             {
                 Pack1 = n.ToString() + ",1," + (n - 2).ToString() + ",3";
                 Pack2 = "2," + (n - 1).ToString() + ",4," + (n - 3).ToString();
@@ -59,7 +60,7 @@ namespace PrintPagesCalculator
 
             //int i = 0;
             int x1 = 5;
-            int n2 = n - 4 + dx;
+            int n2 = n - dx;
 
 
             while (x1 < n2)

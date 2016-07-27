@@ -183,7 +183,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.num1);
             this.Name = "MainForm";
-            this.Text = "Printing book pages calculator";
+            this.Text = "Printing book pages calculator v0.4";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num2)).EndInit();
